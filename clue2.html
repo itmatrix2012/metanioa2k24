@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Solve</title>
+  <style>
+    /* Add some basic styling to the page */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(); /* add background image */
+      background-size: cover; /* make the image cover the entire page */
+      background-position: center; /* center the image */
+    }
+    
+    /* Style the equation container */
+    .equation-container {
+      background-color: #fff; /* white background */
+      padding: 20px;
+      border: 1px solid #ddd; /* light gray border */
+      border-radius: 10px; /* rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+      width: 50%; /* make it half the width of the page */
+      margin: 40px auto; /* center it horizontally */
+    }
+    
+    /* Style the equation text */
+    .equation {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333; /* dark gray text */
+    }
+    
+    /* Style the input field */
+    #answer {
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc; /* light gray border */
+      border-radius: 5px; /* rounded corners */
+      width: 50%; /* make it half the width of the container */
+    }
+    
+    /* Style the submit button */
+    input[type="submit"] {
+      background-color: #4CAF50; /* green background */
+      color: #fff; /* white text */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px; /* rounded corners */
+      cursor: pointer; /* change cursor to a hand */
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #3e8e41; /* darker green on hover */
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var answer = document.getElementById("answer").value;
+      if (answer == "13,21") {
+        return true;
+      } else {
+        alert("Incorrect answer. Please try again.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="equation-container">
+    <p class="equation">complete the sequence</p>
+    <p class="equation">1 , 1 , 2 , 3 , 5 , 8 , __ , __ </p>
+    <p class="equation"> there are  two blank space so make sure you seperate your inputs using a comma</p>
+    <form action="/s2.html" onsubmit=" validateForm()">
+      <input type="text" id="answer" value="" />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+</html>
